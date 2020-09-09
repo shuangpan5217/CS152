@@ -1,0 +1,6 @@
+  JMP a0
+  PUSH 1
+  PRINT
+a0:
+  PUSH 2
+  PRINT
