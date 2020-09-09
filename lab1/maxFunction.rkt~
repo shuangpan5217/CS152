@@ -1,0 +1,16 @@
+#lang racket
+(provide max-num)
+(define (max-num lst)
+  (if(= 0 (length lst))
+     (error "An empty list.")
+     (if(null? (cdr lst))
+         (car lst)
+         (if(> (car lst) (max-num(cdr lst)))
+               (car lst)
+               (max-num (cdr lst))
+         )
+     )
+  )
+)
+
+;;store the value in the varibale then compare

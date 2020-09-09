@@ -1,0 +1,9 @@
+#lang racket
+
+(provide reverse)
+
+(define (reverse lst)
+  (if (= 0 (length lst)) '()
+      (cons (reverse (cdr lst) (car lst)))
+  )
+)
